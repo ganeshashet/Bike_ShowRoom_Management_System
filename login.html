@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Input from UI Design</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+
+	<div class="box">
+      <h2>Login</h2>
+      <form action="home.html" method="post">
+      	<div class="inputBox">
+      		<input type="text" name="userName" autocomplete="off" required id="user_id">
+           <label>Username</label>
+      	</div>
+
+      	<div class="inputBox">
+      		<input type="password" name="password" autocomplete="off" id="password" required=""/>
+           <label>Password</label>
+      	</div>
+		
+      	<input type="submit" onclick="return check(this.form)" id="submit" value="Submit" >
+      	<input type="reset" value="Reset">
+
+	   </form> 
+	  
+	</div>
+</body>
+	<script type="text/javascript">
+			function check(form)
+			{
+				console.log(document.getElementById('user_id').value);
+				if(document.getElementById('user_id').value === "user" && form.password.value === "pass")
+				{
+					return true;
+				}
+					else
+					{
+						alert("Error Username or Password")
+						
+						return false;
+					} 
+				}
+		</script>
+</html>

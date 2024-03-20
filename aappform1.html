@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Application Form</title>
+ <style>
+  *{
+     margin-right : 0px;
+	 text-align : center;
+    }
+  .body
+   {
+     float : left;
+    }
+   h1
+    {
+	  letter-spacing: 2px;
+	  border: 4px cyan;
+	  text-align: center;
+	  color: red;
+	  text-decoration: underline;
+	  text-transform: uppercase;
+	  text-shadow: 5px 1px yellow;
+     }
+   h2
+    {
+	 text-align: center;
+	 color: brown
+    }
+   h3
+    {
+	 color: cyan;
+     }
+   div
+    {
+	 text-align: center;
+	 color: black;
+	 margin: 10px;
+     }
+   label
+    {
+	  margin-right : 0px;
+	  margin: 50px;
+	  padding : 20px;
+     }
+ </style>
+</head>
+<body style="background-image: linear-gradient(to right, green , yellow);">
+	<h1>ROYAL ENFIELD</h1>
+	<form action="aappform1.jsp" method="post" autocomplete="off">
+	 <div>
+		<label>Date :</label><input id = "date" name="date">
+	</div>
+	<div>
+       <h2>Showroom Details</h2>
+	   <div>
+		 <label>Showroom Name:</label><input type="text" name="sname" >
+       </div>
+			<div>
+				<label>Showroom Number:</label><input type="number" name="snumber" >
+			</div>
+			<div>
+				<label>Showroom Location:</label><input type="text" name="city" >
+			</div>
+	</div>
+		<h2>Customer Details</h2>
+		  <div>
+			 <div>
+				<label>Customer Name:</label><input type="text" name="cname" >
+			 </div>
+			 <div>
+				<label> Contact Number:</label><input type="number" name="cnumber" >
+			 </div>
+	
+		<h2 style="text-align: center:">Bike details</h2>
+		  <div>
+			 <label>Bike Model:</label><select name="models" >
+			    <option value="Models"> Models </option>
+				<option value="Himalayan"> Himalayan </option>
+				<option value="Bullet  500cc ">Bullet  500cc</option>
+				<option value="Thunder Bird X 350cc ">Thunder Bird 350cc x</option>
+				<option value="Contiental GT 650cc ">Contiental GT 650cc</option>
+				<option value="Interceptor 650cc">Interceptor 650cc</option>
+				<option value="Bullet Trials 500cc">Bullet Trials 500cc</option>
+				</select>
+		  </div>
+		  <div>
+			<label>Bike Color:</label><select name="color">
+			<option value="Colors">Colors</option>
+				<option value="Redditch Red">Redditch Red</option>
+				<option value="Redditch Green">Redditch Green</option>
+				<option value="Redditch Blue">Redditch Blue</option>
+				<option value="Lagoon">Lagoon</option>
+				<option value="Black">Black</option>
+				<option value="Gray">Gray</option>
+				<option value="Silver">Silver</option>
+				<option value="Classic Black">Classic Black</option>
+				<option value="Classic Chestnut">Classic Chestnut</option>
+				<option value="Pure Black">Pure Black</option>
+				<option value="Mercury Silver">Mercury Silver</option>
+			    </select>
+		  </div>
+				<label>Advance Cost:</label><input type="float" name="cost" required id="costa" >
+	    	</div>
+
+		<div>
+			<input type="submit" name="Submit" value="submit" style="color: white; background: green; text-align: center;">
+			<input type="Reset" value="Reset" style="color: white;background: green; text-align: center;">
+		</div>
+	</form>
+
+</body>
+ <script type="text/javascript">
+
+	var months=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dce"];
+	var day=new Date();
+	console.log(Date);
+	var day=day.getDate()+"-"+months[day.getMonth()]+"-"+day.getFullYear();
+	document.getElementById("date").value=day;
+	
+	function check(form)
+	{
+		console.log(document.getElementById('costa').value);
+		if (document.getElementById('cost').value === "bike cost")
+		   {
+			 return true;
+		    }
+		  else 
+		    {
+			alert("Enter Advance Amount")
+			return false;
+		     }
+	     }
+ </script> 
+</html>
